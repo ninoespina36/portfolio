@@ -3,27 +3,27 @@ body{
     margin: 0;
 	width:100%;
 	height:100%;
-    color: #230444;
-    background-color: #ed8240;
-}
-
-.bg-red{
-    background-color: #90303d;
     color: #fff;
+    background-color: #222831;
 }
 
 .bg-blue{
-    background-color: #230444;
+    background-color: #00adb5;
     color: #fff;
 }
 
 .go-back{
     text-decoration: none !important;
-    color: #90303d !important;
+    color: #00adb5;
     font-weight: 800;
     position: absolute;
     z-index: 7;
     margin: 20px;
+    transition: 0.2s;
+}
+
+.go-back:hover{
+    color: #08dae6;
 }
 
 #wrapper{
@@ -52,7 +52,7 @@ body{
 	position: absolute;
 	height: 4px;
 	width: 100%;
-	background-color: #230444;
+	background-color: #00adb5;
     transition: all cubic-bezier(0.26,0.1,0.27,1.55) 0.35s;
     right: 0;
 }
@@ -111,7 +111,7 @@ body{
     position: fixed;
     height: 100vh;
     width:100vw;
-    background-color: #ed8240f1;
+    background-color: #222831f1;
     z-index:6;
     transition: 0.4s ease-in-out;
     transform: translateX(100%);
@@ -147,14 +147,14 @@ body{
 
 .items ul li a{
     text-decoration: none;
-    color: #230444;
+    color: #fff;
     font-size: 2.8rem;
     font-weight: 800;
     transition: 0.2s;
 }
 
 .items ul li a:hover{
-    color: #90303d;
+    color: #08dae6;
 }
 
 .main-title{
@@ -172,13 +172,13 @@ body{
 }
 
 .main-title h1:after{
-    content: 'Web Developers';
+    content: 'Mobility';
     font-size: 4rem;
     font-weight: 700;
     display: block;
     position: relative;
-    top:-30px;
-    color: #90303d;
+    top:-10px;
+    color: #00adb5;
 }
 
 .main-title p{
@@ -237,7 +237,7 @@ body{
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #90303d9b;
+    background-color: #00adb59b;
     opacity: 0;
     transition: 0.2s;
 }
@@ -270,7 +270,7 @@ body{
 }
 
 .slider a:hover{
-    color: #90303d;
+    color: #00adb5;
 }
 
 .slide{
@@ -291,27 +291,27 @@ body{
     display: block;
     width: 150px;
     height: 10px;
-    background-color: #90303d;
+    background-color: #00adb5;
     margin-top: 20px;
 }
 
-.slide.bg-red h1:after{
+.slide.bg-blue h1:after{
     content: '';
     display: block;
     width: 150px;
     height: 10px;
-    background-color: rgba(255, 255, 255, 0.507);
+    background-color: #393e46;
     margin-top: 20px;
 }
 
 .slide h2{
     font-weight: 800;
     font-size: 3rem;
+    color: #00adb5;
 }
 
-.slide h2{
-    font-weight: 800;
-    font-size: 2rem;
+.slide.bg-blue h2{
+    color: #fff;
 }
 
 .slide p,
@@ -326,10 +326,16 @@ body{
 }
 
 .team-card{
-    height: 450px;
+    color: #222831;
+    height: 460px;
+    margin-bottom: 10px;
 }
 
-.team-card ul li{
+.team-card i{
+    color: #00adb5;
+}
+
+.team-card p{
     font-size: 0.9rem;
     text-align: left;
     margin-bottom: 10px;

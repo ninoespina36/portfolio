@@ -17,6 +17,15 @@ body{
     color: #fff;
 }
 
+.go-back{
+    text-decoration: none !important;
+    color: #90303d !important;
+    font-weight: 800;
+    position: absolute;
+    z-index: 7;
+    margin: 20px;
+}
+
 #wrapper{
     position: relative;
     overflow: hidden;

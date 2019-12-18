@@ -1,0 +1,415 @@
+body{
+    padding: 0;
+    margin: 0;
+	width:100%;
+	height:100%;
+    color: #230444;
+    background-color: #ed8240;
+}
+
+.bg-red{
+    background-color: #90303d;
+    color: #fff;
+}
+
+.bg-blue{
+    background-color: #230444;
+    color: #fff;
+}
+
+#wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-toggler{
+    position: absolute;
+	cursor: pointer;
+	display: block;
+	margin: 60px 60px 0 0;
+    transform: translateY(-5%);
+    transition: 0.2s;
+    z-index: 7;
+    right: 0;
+}
+
+.menu-toggler .circle{
+	width: 35px;
+	height: 35px;
+	position: relative;
+}
+
+.menu-toggler .circle .line{
+	position: absolute;
+	height: 4px;
+	width: 100%;
+	background-color: #230444;
+    transition: all cubic-bezier(0.26,0.1,0.27,1.55) 0.35s;
+    right: 0;
+}
+
+.menu-toggler .circle .top{
+    top: 18%;
+}
+
+.menu-toggler .circle .middle{
+    top: 48%;
+    width: 25px;
+}
+
+.menu-toggler .circle .bottom{
+    width: 15px;
+	top: 78%;
+}
+
+.menu-toggler .menu-icon.close-btn .top{
+	transform: rotate(45deg);
+    top: 48%;
+    width: 100%;
+}
+
+.menu-toggler .menu-icon.close-btn .middle,
+.menu-toggler .menu-icon.close-btn .bottom{
+	transform: rotate(-45deg);
+    top: 48%;
+    width: 100%;
+}
+
+.menu-toggler:hover .circle .middle,
+.menu-toggler:hover .circle .bottom{
+    width: 100%;
+}
+
+.menu.active{
+    transform: translateX(0);
+}
+
+.menu.active .items ul li:nth-child(1){
+    transform: translateX(0);
+}
+
+.menu.active .items ul li:nth-child(2){
+    transform: translateX(0);
+}
+
+.menu.active .items ul li:nth-child(3){
+    transform: translateX(0);
+}
+
+.menu{
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    width:100vw;
+    background-color: #ed8240f1;
+    z-index:6;
+    transition: 0.4s ease-in-out;
+    transform: translateX(100%);
+}
+
+.items{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.items ul{
+    list-style: none;
+    padding-left: 100px;
+    overflow: hidden;
+}
+
+.items ul li:nth-child(1){
+    transform: translateX(150%);
+    transition: 1s;
+}
+
+.items ul li:nth-child(2){
+    transform: translateX(150%);
+    transition: 0.9s;
+}
+
+.items ul li:nth-child(3){
+    transform: translateX(150%);
+    transition: 0.8s;
+}
+
+.items ul li a{
+    text-decoration: none;
+    color: #230444;
+    font-size: 2.8rem;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+.items ul li a:hover{
+    color: #90303d;
+}
+
+.main-title{
+    padding: 100px 60px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.main-title h1{
+    margin: 0;
+    font-size: 9rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.main-title h1:after{
+    content: 'Web Developers';
+    font-size: 4rem;
+    font-weight: 700;
+    display: block;
+    position: relative;
+    top:-30px;
+    color: #90303d;
+}
+
+.main-title p{
+    margin-top: 40px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#particles-js{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.work{
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.work .description{
+    position: absolute;
+    bottom: 20%;
+    left: 30px;
+    color: #fff;
+    z-index: 5;
+}
+
+.work .description h5{
+    opacity: 0;
+    transition: 0.4s;
+    transform: translateY(-100%);
+}
+
+.work .description p{
+    opacity: 0;
+    transition: 0.4s;
+    transform: translateY(100%);
+}
+
+.work:hover .description h5,
+.work:hover .description p{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.work:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #90303d9b;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.work:hover:after{
+    opacity: 1;
+}
+
+.work img{
+    width: 100%;
+    transition: 0.2s;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.slider{
+    position: fixed;
+    top: 40%;
+    right: 20px;
+    z-index: 999;
+}
+
+.slider a{
+    display: block;
+    color: #230444;
+    font-size: 3rem;
+    transition: 0.3s;
+}
+
+.slider a:hover{
+    color: #90303d;
+}
+
+.slide{
+    min-height: 100vh;
+    width: 100wv;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide h1{
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+.slide h1:after{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 10px;
+    background-color: #90303d;
+    margin-top: 20px;
+}
+
+.slide.bg-red h1:after{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.507);
+    margin-top: 20px;
+}
+
+.slide h2{
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.slide h2{
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.slide p,
+.slide ul li{
+    font-size: 2rem;
+}
+
+.slide ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.team-card{
+    height: 450px;
+}
+
+.team-card ul li{
+    font-size: 0.9rem;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.agile{
+    position: relative;
+}
+
+.agile h5{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.agile img{
+    width: 350px;
+    animation: spin 55s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+
+    50% {
+         opacity:0;
+    }
+
+    100% {
+        opacity:1;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .main-title h1{
+        font-size:7rem;
+    }
+    
+    .main-title h1:after{
+        font-size: 3rem;
+        top: -10px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .main-title h1{
+        font-size:4.5rem;
+    }
+    
+    .main-title h1:after{
+        font-size: 2rem;
+        top: -10px;
+    }
+
+    .main-title p{
+        font-size: 1rem;
+    }
+    
+    .main-title{
+        padding: 100px 30px;
+    }
+
+    .menu-toggler{
+        margin: 30px 30px 0 0;
+    }
+
+    .items ul{
+        padding-left: 30px;
+    }
+    
+    .items ul li a{
+        font-size: 2rem;
+    }
+
+    .slide h1{
+        font-size: 2rem;
+    }
+}

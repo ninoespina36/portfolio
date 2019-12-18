@@ -1,0 +1,89 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="wrapper">
+
+        <div class="menu-toggler">
+            <div class="circle menu-icon">
+              <span class="line top"></span>
+              <span class="line middle"></span>
+              <span class="line bottom"></span>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="row h-100">
+                <div class="col-lg-6">
+                    <div class="items">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href=""> Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="main-title">
+            <div>
+                <h1>Artisans</h1>
+                <p>We are professionals from Tagbilaran City, Bohol, Philippines. We are <br/> developing &nbsp;<span id="typed" class="font-weight-bold"></span><span class="cursor"></span></p>
+                
+            </div>
+        </div>     
+
+        <section>
+            <div class="container mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <a class="work" href="./grocerydistrict.html">
+                            <img src="./img/proj1.jpg" alt="">
+                            <div class="description">
+                                <h5>GroceryDistrict</h5>
+                                <p>Ecommerce</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div  id="particles-js"></div>
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/typingEffect.js"></script>
+    <script src="./js/particles/particles.min.js"></script>
+    <script src="./js/particles/app.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('.menu-toggler').on('click',function(){
+                $('.menu-icon').toggleClass('close-btn');
+                $('.menu').toggleClass('active');
+                $(this).toggleClass('position-fixed');
+            });
+
+        });
+        
+        $('#typed').typing({
+            strings: ['E-commerce Websites.','Blog Sites.','Personal Websites.'],
+            color:'#90303d',
+            typingColor:'#90303d',
+            stringStartDelay: 0,
+            loopCount: 999,
+            cursorChar: '<span style="border:1.5px solid #90303d" />',
+            typingOpacity: '0',
+            typeDelay: 70,
+        });
+    </script>
+</body>
+</html>
